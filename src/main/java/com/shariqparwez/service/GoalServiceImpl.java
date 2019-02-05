@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.shariqparwez.model.Goal;
+import com.shariqparwez.model.GoalReport;
 import com.shariqparwez.repository.GoalRepository;
 
 @Service("goalService")
@@ -23,6 +24,11 @@ public class GoalServiceImpl implements GoalService {
 	@Override
 	public List<Goal> findAllGoals() {
 		return goalRepository.loadAll();
+	}
+
+	@Override
+	public List<GoalReport> findAllGoalReports() {
+		return goalRepository.findAllGoalReports();
 	}
 
 }
