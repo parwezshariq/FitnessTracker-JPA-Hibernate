@@ -1,4 +1,4 @@
-package com.shariqparwez.repository;
+/*package com.shariqparwez.repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -20,4 +20,4 @@ public class ExerciseRepositoryImpl implements ExerciseRepository {
 		return exercise;
 	}
 
-}
+}*/
