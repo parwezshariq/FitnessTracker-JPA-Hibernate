@@ -1,5 +1,8 @@
 http://localhost:8080/FitnessTracker-JPA-Hibernate/
-
+http://localhost:8080/FitnessTracker-JPA-Hibernate/addGoal.html
+http://localhost:8080/FitnessTracker-JPA-Hibernate/addMinutes.html
+http://localhost:8080/FitnessTracker-JPA-Hibernate/getGoals.html
+http://localhost:8080/FitnessTracker-JPA-Hibernate/getGoalReports.html
 --------------------------------------
 
 CREATE SCHEMA `fitnesstracker` ;
