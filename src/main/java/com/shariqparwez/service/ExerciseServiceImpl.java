@@ -3,14 +3,21 @@ package com.shariqparwez.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.shariqparwez.model.Activity;
+import com.shariqparwez.model.Exercise;
+import com.shariqparwez.repository.ExerciseRepository;
 
 
 @Service("exerciseService")
 public class ExerciseServiceImpl implements ExerciseService {
 
+	@Autowired
+	private ExerciseRepository exerciseRepository;
+	
 	public List<Activity> findAllActivities() {
 		
 		List<Activity> activities = new ArrayList<Activity>();
@@ -28,6 +35,13 @@ public class ExerciseServiceImpl implements ExerciseService {
 		activities.add(swim);
 		
 		return activities;
+	}
+
+	@Override
+	@Transactional
+	public Exercise save(Exercise exercise) {
+		exercise = exerciseRepository.save(exercise);
+		return exercise;
 	}
 	
 }
